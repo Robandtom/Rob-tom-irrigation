@@ -600,3 +600,31 @@ footer p{
     font-size:38px;
   }
 }
+/* Homepage garden hero image */
+.hero {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.hero-card {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.garden-art {
+  min-height: 480px;
+  background-image: url("file_000000003ab081f49baf9d57bef2bd38.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 760px) {
+  .garden-art {
+    min-height: 330px;
+    background-position: center;
+  }
+}
