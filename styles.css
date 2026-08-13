@@ -628,3 +628,13 @@ footer p{
     background-position: center;
   }
 }
+/* Mobile hero spacing fix */
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 25px;
+  }
+
+  .hero-grid {
+    gap: 20px;
+  }
+}
