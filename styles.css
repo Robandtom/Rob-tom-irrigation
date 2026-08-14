@@ -614,9 +614,9 @@ footer p{
 
 .garden-art {
   min-height: 480px;
-  background-image: url("file_000000003ab081f49baf9d57bef2bd38.png");
+  background-image: url("file_00000000e17081f487d41922846c5ae2.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 72%;
   background-repeat: no-repeat;
   border-radius: 0;
   box-shadow: none;
@@ -625,7 +625,7 @@ footer p{
 @media (max-width: 760px) {
   .garden-art {
     min-height: 330px;
-    background-position: center;
+    background-position: center 72%;
   }
 }
 /* Mobile hero spacing fix */
