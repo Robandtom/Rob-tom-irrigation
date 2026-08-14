@@ -638,3 +638,15 @@ footer p{
     gap: 20px;
   }
 }
+.homepage-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+.hero-card {
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+}
