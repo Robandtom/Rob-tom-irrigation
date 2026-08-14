@@ -647,6 +647,7 @@ footer p{
 
 .hero-card {
   overflow: hidden;
+  margin: 0;
   background: transparent;
   box-shadow: none;
 }
