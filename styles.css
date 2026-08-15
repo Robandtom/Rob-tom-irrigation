@@ -1,12 +1,11 @@
-:root {
-  --blue: #12609a;
-  --green: #1b7a42;
-  --dark-green: #0f6435;
-  --text: #4f5a55;
-  --soft-green: #eef8f2;
-  --white: #ffffff;
-  --line: #e7ece9;
-}
+/* =========================================================
+   ROB & TOM GARDEN IRRIGATION
+   Homepage styles
+   Matched to the new index.html
+   ========================================================= */
+
+
+/* ---------- BASIC RESET ---------- */
 
 * {
   box-sizing: border-box;
@@ -19,485 +18,1140 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: #fff;
+  color: #18364a;
+  background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
-/* TOP BAR */
+.wrap {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
 
 .topbar {
-  background: var(--blue);
-  color: white;
-  padding: 10px 20px;
-  font-size: 15px;
+  background: linear-gradient(90deg, #2074c8, #1768b8);
+  color: #ffffff;
 }
 
 .topbar-inner {
-  width: min(1180px, 94%);
-  margin: 0 auto;
+  min-height: 46px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.topbar a {
-  color: white;
-  font-weight: 700;
-}
 
-/* HEADER */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .site-header {
-  background: white;
-  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #e4edf2;
 }
 
-.nav-wrap {
-  width: min(1180px, 94%);
-  min-height: 105px;
-  margin: 0 auto;
+.nav {
+  min-height: 106px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  position: relative;
+  gap: 24px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 13px;
-  color: var(--blue);
+  gap: 12px;
   flex-shrink: 0;
 }
 
-.drop {
-  font-size: 52px;
+.brand-drop {
+  font-size: 47px;
   line-height: 1;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-text strong {
-  display: block;
-  color: var(--blue);
-  font-size: 31px;
+  color: #136b9f;
+  font-size: 29px;
   line-height: 1;
 }
 
 .brand-text small {
-  display: block;
-  margin-top: 8px;
-  color: var(--green);
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 3.5px;
+  margin-top: 6px;
+  color: #187344;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
 }
 
 .main-nav {
+  margin-left: auto;
+}
+
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.main-nav a {
-  color: #26332e;
+.nav-links a {
+  display: block;
+  padding: 12px 0;
+  color: #173448;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-.main-nav a:hover {
-  color: var(--blue);
+.nav-links a:hover,
+.nav-links a.active {
+  color: #176fc2;
 }
 
-.main-nav .nav-quote {
-  background: var(--blue);
-  color: white;
-  padding: 13px 18px;
-  border-radius: 999px;
+.nav-links a.active {
+  border-bottom: 2px solid #176fc2;
 }
 
-.menu-toggle {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.menu-button {
+.menu-btn {
   display: none;
-  width: 48px;
+  border: 0;
+  padding: 8px;
+  background: transparent;
+  color: #166ca0;
+  font-size: 32px;
   cursor: pointer;
 }
 
-.menu-button span {
-  display: block;
-  height: 4px;
-  margin: 7px 0;
-  background: var(--blue);
-  border-radius: 5px;
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+  text-align: center;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
-/* HERO */
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.header-quote {
+  flex-shrink: 0;
+  padding: 14px 20px;
+
+  background: #1772cf;
+  color: white;
+
+  font-size: 13px;
+
+  box-shadow: 0 6px 18px rgba(23, 114, 207, 0.17);
+}
+
+.btn-primary {
+  min-height: 57px;
+  padding: 0 24px;
+
+  background: #1772cf;
+  color: #ffffff;
+
+  font-size: 16px;
+
+  box-shadow: 0 8px 20px rgba(23, 114, 207, 0.2);
+}
+
+.btn-call {
+  min-height: 57px;
+  padding: 0 24px;
+
+  background: #087844;
+  color: #ffffff;
+
+  font-size: 16px;
+
+  box-shadow: 0 8px 20px rgba(8, 120, 68, 0.18);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
-  padding: 55px 0 40px;
-  overflow: hidden;
-}
-
-.hero-inner {
-  width: min(1180px, 94%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 0.92fr 1.08fr;
-  align-items: center;
-  gap: 28px;
-}
-
-.hero-copy {
   position: relative;
-  z-index: 2;
+  overflow: hidden;
+
+  min-height: 720px;
+
+  background: #ffffff;
+}
+
+
+/*
+   Garden image.
+
+   The page still works before hero-garden.png is uploaded.
+   Until then you will simply see the light fallback background.
+*/
+
+.hero-garden {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 41%;
+
+  z-index: 0;
+
+  background-color: #edf7f1;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      rgba(255,255,255,0.97) 6%,
+      rgba(255,255,255,0.78) 18%,
+      rgba(255,255,255,0.28) 35%,
+      rgba(255,255,255,0) 54%
+    ),
+    url("assets/hero-garden.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*
+   A soft white fade behind the text.
+   This keeps the words readable without making
+   the garden look like a rectangular photograph.
+*/
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #ffffff 34%,
+      rgba(255,255,255,0.94) 42%,
+      rgba(255,255,255,0.56) 53%,
+      rgba(255,255,255,0) 69%
+    );
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 3;
+
+  min-height: 625px;
+
+  display: flex;
+  align-items: flex-start;
+
+  padding-top: 62px;
+  padding-bottom: 165px;
+}
+
+.hero-content {
+  width: 56%;
+  max-width: 675px;
 }
 
 .eyebrow {
-  margin: 0 0 18px;
-  color: var(--green);
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 3.5px;
-  line-height: 1.5;
+  margin: 0 0 20px;
+
+  color: #137248;
+
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 800;
+
+  letter-spacing: 3px;
 }
 
 .hero h1 {
   margin: 0;
-  color: var(--dark-green);
-  font-size: clamp(52px, 5.6vw, 78px);
+
+  font-size: clamp(52px, 5vw, 76px);
   line-height: 0.98;
-  letter-spacing: -2px;
+
+  letter-spacing: -3px;
 }
 
 .hero h1 span {
   display: block;
-  margin-top: 8px;
-  color: var(--blue);
-  font-size: 0.68em;
 }
 
-.hero-text {
-  max-width: 560px;
-  margin: 25px 0 15px;
+.hero-green {
+  color: #075c38;
+}
+
+.hero-blue {
+  margin-top: 8px;
+  color: #176cc4;
+}
+
+.hero-description {
+  max-width: 590px;
+
+  margin: 27px 0 0;
+
+  color: #345367;
+
   font-size: 20px;
   line-height: 1.55;
 }
 
-.script {
-  margin: 17px 0 27px;
-  color: var(--green);
+.hero-script {
+  margin: 20px 0 0;
+
+  color: #13814e;
+
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 36px;
   font-style: italic;
-  line-height: 1.15;
+
+  font-size: 31px;
+  line-height: 1.1;
 }
 
 .hero-actions {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
   gap: 12px;
-  width: min(360px, 100%);
+
+  margin-top: 27px;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 56px;
-  padding: 14px 25px;
-  border-radius: 999px;
-  color: white;
-  font-size: 17px;
-  font-weight: 800;
-  text-align: center;
+
+/* =========================================================
+   IRRIGATION EQUIPMENT
+   ========================================================= */
+
+/*
+   The index already contains the correct image position.
+
+   It is deliberately hidden until we add the real
+   hero-equipment.png file in the next step.
+
+   This prevents a broken-image symbol appearing now.
+*/
+
+.hero-equipment {
+  display: none;
+
+  position: absolute;
+  z-index: 4;
+
+  right: 3%;
+  bottom: 115px;
+
+  width: min(42vw, 520px);
 }
 
-.btn-blue {
-  background: var(--blue);
-}
-
-.btn-green {
-  background: var(--green);
-}
-
-.btn:hover {
-  filter: brightness(0.93);
-}
-
-/* HERO ARTWORK */
-
-.hero-visual {
+.hero-equipment img {
   width: 100%;
-  min-height: 585px;
-  background-size: cover;
-  background-position: center 72%;
-  background-repeat: no-repeat;
+  height: auto;
 }
 
-/* BENEFITS */
 
-.benefits {
-  padding: 28px 20px;
-  background: white;
-}
+/* =========================================================
+   BENEFITS PANEL
+   ========================================================= */
 
-.benefits-inner {
-  width: min(1180px, 94%);
-  margin: 0 auto;
+.benefits-panel {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 50%;
+  bottom: 24px;
+
+  transform: translateX(-50%);
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(215, 229, 236, 0.95);
+  border-radius: 23px;
+
+  box-shadow: 0 15px 42px rgba(29, 65, 79, 0.15);
+
+  padding: 22px 15px;
 }
 
 .benefit {
   display: flex;
-  flex-direction: column;
-  gap: 7px;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-width: 0;
+
+  padding: 9px 18px;
+
+  border-right: 1px solid #dce8ed;
+}
+
+.benefit:last-child {
+  border-right: none;
+}
+
+.benefit-icon {
+  flex-shrink: 0;
+
+  width: 38px;
+
+  font-size: 29px;
+  line-height: 1;
 }
 
 .benefit strong {
-  color: #48534e;
-  font-size: 18px;
+  color: #08633d;
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
 }
 
-.benefit span {
-  line-height: 1.5;
+.benefit p {
+  margin: 7px 0 0;
+
+  color: #536a77;
+
+  font-size: 13px;
+  line-height: 1.45;
 }
 
-/* SERVICES */
 
-.services-section {
-  padding: 75px 0;
-  background: var(--soft-green);
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+
+.intro-section {
+  padding: 90px 0;
 }
 
-.section-inner {
-  width: min(1180px, 90%);
-  margin: 0 auto;
+.section-label {
+  margin: 0;
+
+  color: #157345;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
 }
 
-.services-section h2,
-.about-section h2 {
-  margin: 8px 0 18px;
-  color: var(--dark-green);
-  font-size: clamp(38px, 5vw, 56px);
-  line-height: 1.08;
+.intro-section h2,
+.technology-section h2,
+.hosepipe-section h2,
+.final-cta h2 {
+  margin: 14px 0 18px;
+
+  color: #073f2b;
+
+  font-size: clamp(35px, 4vw, 50px);
+  line-height: 1.1;
+
+  letter-spacing: -1px;
 }
 
-.section-intro {
-  max-width: 760px;
-  margin-bottom: 38px;
+.section-lead {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #566c78;
+
   font-size: 19px;
   line-height: 1.65;
 }
 
-.service-grid {
+
+/* =========================================================
+   SERVICE CARDS
+   ========================================================= */
+
+.service-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   gap: 22px;
+
+  margin-top: 42px;
 }
 
 .service-card {
   padding: 30px;
-  background: white;
-  border-radius: 24px;
+
+  background: #f5fafb;
+
+  border: 1px solid #e1ecef;
+  border-radius: 21px;
 }
 
 .service-card h3 {
-  margin: 0 0 14px;
-  color: var(--blue);
+  margin: 0 0 16px;
+
+  color: #0b6040;
+
   font-size: 23px;
 }
 
 .service-card p {
-  line-height: 1.6;
+  margin: 0;
+
+  color: #58707c;
+
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 .service-card a {
-  color: var(--blue);
+  display: inline-block;
+
+  margin-top: 22px;
+
+  color: #176fc2;
+
   font-weight: 800;
 }
 
-/* ABOUT */
 
-.about-section {
-  padding: 75px 0;
-  text-align: center;
+/* =========================================================
+   TECHNOLOGY SECTION
+   ========================================================= */
+
+.technology-section {
+  padding: 90px 0;
+
+  background: #eef8f4;
 }
 
-.about-section .section-inner {
-  max-width: 850px;
+.technology-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 65px;
+
+  align-items: center;
 }
 
-.about-section p:not(.eyebrow) {
-  font-size: 19px;
+.technology-section p {
+  color: #536b77;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.feature-list {
+  display: grid;
+  gap: 14px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 18px 20px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  color: #365864;
+
+  font-weight: 700;
+
+  box-shadow: 0 6px 20px rgba(26, 68, 74, 0.06);
+}
+
+
+/* =========================================================
+   HOSEPIPE SECTION
+   ========================================================= */
+
+.hosepipe-section {
+  padding: 82px 0;
+}
+
+.hosepipe-box {
+  padding: 52px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e9f7ff,
+      #f1fbf5
+    );
+
+  border-radius: 27px;
+}
+
+.hosepipe-box > div {
+  max-width: 830px;
+}
+
+.hosepipe-box p {
+  color: #526a76;
+
+  font-size: 17px;
   line-height: 1.65;
-  margin-bottom: 28px;
 }
 
-.about-section .btn {
-  max-width: 340px;
-  margin: 0 auto;
+.small-note {
+  font-size: 14px !important;
 }
 
-/* FOOTER */
 
-.site-footer {
-  padding: 28px 20px;
-  background: var(--dark-green);
-  color: white;
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.final-cta {
+  padding: 85px 0;
+
+  background: #073d2a;
+
+  color: #ffffff;
+
   text-align: center;
 }
 
-/* MOBILE */
+.final-cta h2 {
+  color: #ffffff;
+}
 
-@media (max-width: 760px) {
+.final-cta p {
+  margin: 0;
+
+  color: #d6e9e0;
+
+  font-size: 19px;
+}
+
+.final-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 28px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 40px 0;
+
+  background: #052a20;
+
+  color: #d7e9e1;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+footer p {
+  margin: 7px 0;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .wrap {
+    width: calc(100% - 30px);
+  }
+
+
+  /* HEADER */
 
   .topbar {
     display: none;
   }
 
-  .nav-wrap {
-    width: 100%;
-    min-height: 125px;
-    padding: 20px 28px;
+  .nav {
+    min-height: 104px;
   }
 
-  .drop {
-    font-size: 48px;
+  .brand-drop {
+    font-size: 42px;
   }
 
   .brand-text strong {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .brand-text small {
-    font-size: 11px;
-    letter-spacing: 3px;
+    font-size: 9px;
+    letter-spacing: 2.5px;
   }
 
-  .menu-button {
+  .header-quote {
+    display: none;
+  }
+
+  .menu-btn {
     display: block;
   }
 
   .main-nav {
+    margin-left: auto;
+  }
+
+  .nav-links {
     display: none;
+
     position: absolute;
-    top: 100%;
+
+    top: 104px;
     left: 0;
     right: 0;
-    z-index: 50;
-    padding: 18px 25px 25px;
-    background: white;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+
+    z-index: 100;
+
     flex-direction: column;
     align-items: stretch;
-    gap: 5px;
+
+    gap: 0;
+
+    padding: 15px 24px 25px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e8eef1;
+
+    box-shadow: 0 12px 25px rgba(18, 52, 66, 0.12);
   }
 
-  .main-nav a {
-    padding: 12px 10px;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  .menu-toggle:checked ~ .main-nav {
+  .nav-links.open {
     display: flex;
   }
+
+  .nav-links a {
+    padding: 14px 4px;
+
+    font-size: 17px;
+
+    border-bottom: 1px solid #edf2f4;
+  }
+
+
+  /* =======================================================
+     MOBILE HERO
+
+     Important:
+     hero-garden stays ABSOLUTE.
+
+     Therefore it cannot jump above the text even though
+     the garden div comes before the text in index.html.
+     ======================================================= */
 
   .hero {
-    padding: 38px 0 25px;
+    min-height: 900px;
+
+    background: #ffffff;
   }
 
-  .hero-inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
+  .hero-garden {
+    position: absolute;
+
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    min-height: 500px;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255,255,255,0.94) 8%,
+        rgba(255,255,255,0.58) 20%,
+        rgba(255,255,255,0.08) 42%,
+        rgba(255,255,255,0) 58%
+      ),
+      url("assets/hero-garden.png");
+
+    background-size: cover;
+    background-position: center;
   }
 
-  .hero-copy {
+  .hero::after {
+    background:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #ffffff 42%,
+        rgba(255,255,255,0.96) 48%,
+        rgba(255,255,255,0.48) 61%,
+        rgba(255,255,255,0) 75%
+      );
+  }
+
+  .hero-layout {
+    min-height: 760px;
+
+    display: block;
+
+    padding-top: 45px;
+    padding-bottom: 240px;
+  }
+
+  .hero-content {
     width: 100%;
-    padding: 0 28px;
+    max-width: 640px;
   }
 
   .eyebrow {
+    margin-bottom: 18px;
+
     font-size: 14px;
-    letter-spacing: 3px;
+    line-height: 1.55;
+
+    letter-spacing: 2.4px;
   }
 
   .hero h1 {
-    font-size: 54px;
+    max-width: 650px;
+
+    font-size: clamp(48px, 10vw, 67px);
+
     line-height: 0.98;
+
+    letter-spacing: -2px;
   }
 
-  .hero h1 span {
-    font-size: 39px;
-    margin-top: 10px;
+  .hero-blue {
+    margin-top: 8px;
   }
 
-  .hero-text {
+  .hero-description {
+    max-width: 610px;
+
+    margin-top: 24px;
+
     font-size: 19px;
     line-height: 1.55;
   }
 
-  .script {
-    font-size: 36px;
-    line-height: 1.15;
+  .hero-script {
+    margin-top: 20px;
+
+    font-size: 32px;
   }
 
   .hero-actions {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 610px;
+
+    gap: 11px;
+
+    margin-top: 26px;
   }
 
-  .btn {
+  .hero-actions .btn {
+    min-height: 58px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: 15px;
+  }
+
+
+  /* BENEFITS */
+
+  .benefits-panel {
+    bottom: 18px;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 15px;
+
+    border-radius: 20px;
+  }
+
+  .benefit {
+    padding: 15px 12px;
+
+    border-right: none;
+    border-bottom: 1px solid #e0e9ed;
+  }
+
+  .benefit:nth-child(odd) {
+    border-right: 1px solid #e0e9ed;
+  }
+
+  .benefit:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+
+  /* LOWER PAGE */
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+  .wrap {
+    width: calc(100% - 28px);
+  }
+
+
+  /* HEADER */
+
+  .nav {
+    min-height: 98px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-drop {
+    font-size: 38px;
+  }
+
+  .brand-text strong {
+    font-size: 24px;
+  }
+
+  .brand-text small {
+    margin-top: 5px;
+
+    font-size: 8px;
+    letter-spacing: 2.2px;
+  }
+
+  .menu-btn {
+    font-size: 30px;
+  }
+
+  .nav-links {
+    top: 98px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 1030px;
+  }
+
+  .hero-garden {
+    top: 570px;
+
+    min-height: 460px;
+
+    background-position: 60% center;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #ffffff 52%,
+        rgba(255,255,255,0.9) 58%,
+        rgba(255,255,255,0.36) 70%,
+        rgba(255,255,255,0) 82%
+      );
+  }
+
+  .hero-layout {
+    min-height: 860px;
+
+    padding-top: 38px;
+    padding-bottom: 270px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 12vw, 56px);
+
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    margin-top: 22px;
+
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .hero-script {
+    margin-top: 19px;
+
+    font-size: 30px;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 24px;
+  }
+
+  .hero-actions .btn {
     width: 100%;
-    min-height: 62px;
+
+    min-height: 59px;
+
+    font-size: 16px;
+  }
+
+
+  /* BENEFITS */
+
+  .benefits-panel {
+    bottom: 14px;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 10px;
+  }
+
+  .benefit {
+    display: block;
+
+    padding: 12px 9px;
+  }
+
+  .benefit-icon {
+    margin-bottom: 8px;
+
+    font-size: 25px;
+  }
+
+  .benefit strong {
+    font-size: 11px;
+  }
+
+  .benefit p {
+    margin-top: 5px;
+
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+
+  /* LOWER SECTIONS */
+
+  .intro-section,
+  .technology-section,
+  .hosepipe-section,
+  .final-cta {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .intro-section h2,
+  .technology-section h2,
+  .hosepipe-section h2,
+  .final-cta h2 {
+    font-size: 34px;
+  }
+
+  .section-lead {
     font-size: 18px;
   }
 
-  .hero-visual {
-    width: calc(100% - 56px);
-    min-height: 430px;
-    margin: 10px 28px 0;
-    background-size: cover;
-    background-position: center 72%;
+  .service-card {
+    padding: 25px;
   }
 
-  .benefits {
-    padding: 28px;
-  }
-
-  .benefits-inner {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .services-section,
-  .about-section {
-    padding: 55px 0;
-  }
-
-  .section-inner {
-    width: calc(100% - 56px);
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .services-section h2,
-  .about-section h2 {
-    font-size: 39px;
+  .hosepipe-box {
+    padding: 28px 21px;
   }
   }
