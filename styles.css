@@ -395,15 +395,15 @@ a {
 */
 
 .hero-equipment {
-  display: none;
+    display: block;
 
-  position: absolute;
-  z-index: 4;
+    position: absolute;
+    z-index: 4;
 
-  right: 3%;
-  bottom: 115px;
+    left: 3%;
+    bottom: 18px;
 
-  width: min(42vw, 520px);
+    width: min(42vw, 620px);
 }
 
 .hero-equipment img {
