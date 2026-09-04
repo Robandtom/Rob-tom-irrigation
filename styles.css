@@ -230,6 +230,16 @@ a {
    Until then you will simply see the light fallback background.
 */
 
+   .hero-equipment {
+  position: absolute;
+  left: 3%;
+  bottom: 18px;
+  width: min(42vw, 620px);
+  height: auto;
+  z-index: 4;
+  object-fit: contain;
+  pointer-events: none;
+}
 .hero-garden {
   position: absolute;
 
