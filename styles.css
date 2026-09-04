@@ -396,19 +396,17 @@ a {
 
 .hero-equipment {
     display: block;
-
     position: absolute;
     z-index: 4;
-
     left: 3%;
     bottom: 18px;
-
     width: min(42vw, 620px);
 }
 
 .hero-equipment img {
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 
