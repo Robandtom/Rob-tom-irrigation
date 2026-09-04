@@ -261,8 +261,7 @@ a {
       rgba(255,255,255,0.28) 35%,
       rgba(255,255,255,0) 54%
     ),
-    url("assets/hero-garden.png");
-
+    url("hero-garden.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
