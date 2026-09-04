@@ -1162,8 +1162,12 @@ footer p {
     padding: 28px 21px;
   }
   }
+/* FINAL HERO GARDEN IMAGE */
 .hero-garden {
-  background-image: url("file_00000000a930821083cca7e11d65da13.png") !important;
+  background-image: url("/Rob-tom-irrigation/file_00000000a930821083cca7e11d65da13.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 .hero::after {
