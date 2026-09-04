@@ -1162,3 +1162,10 @@ footer p {
     padding: 28px 21px;
   }
   }
+.hero-garden {
+  background-image: url("hero-garden.png") !important;
+}
+
+.hero::after {
+  display: none !important;
+}
