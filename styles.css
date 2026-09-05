@@ -842,7 +842,7 @@ footer p {
         rgba(255,255,255,0.08) 42%,
         rgba(255,255,255,0) 58%
       ),
-      url("file_00000000a930821083cca7e11d65da13.png");
+      url("hero-garden.png");
 
     background-size: cover;
     background-position: center;
@@ -1164,7 +1164,7 @@ footer p {
   }
 /* FINAL HERO GARDEN IMAGE */
 .hero-garden {
-  background-image: url("/Rob-tom-irrigation/file_00000000a930821083cca7e11d65da13.png") !important;
+  background-image: url("/Rob-tom-irrigation/hero-garden.png") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
