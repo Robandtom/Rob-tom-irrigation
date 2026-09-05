@@ -1173,3 +1173,12 @@ background-position: right center !important;
 .hero::after {
   display: none !important;
 }
+/* FINAL BENEFITS PANEL POSITION */
+.benefits-panel {
+    bottom: -150px !important;
+    transform: translateX(-50%) !important;
+}
+
+.hero {
+    margin-bottom: 150px;
+}
