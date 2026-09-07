@@ -1164,7 +1164,7 @@ footer p {
   }
 /* FINAL HERO GARDEN IMAGE */
 .hero-garden {
-  background-image: url("/Rob-tom-irrigation/%20hero-garden.png") !important;
+  background-image: url("/Rob-tom-irrigation/hero-garden.png") !important;
   background-size: contain !important;
 background-position: right center !important;
   background-repeat: no-repeat !important;
