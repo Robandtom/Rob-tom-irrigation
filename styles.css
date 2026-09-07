@@ -1182,3 +1182,9 @@ background-position: right center !important;
 .hero {
     margin-bottom: 150px;
 }
+/* FINAL EQUIPMENT POSITION TUNING */
+.hero-equipment {
+    width: min(38vw, 560px) !important;
+    left: 1% !important;
+    bottom: -10px !important;
+}
