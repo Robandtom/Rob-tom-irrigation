@@ -1162,18 +1162,108 @@ footer p {
     padding: 28px 21px;
   }
   }
-/* FINAL HERO GARDEN IMAGE */
+/* =========================================================
+   FINAL HERO LAYOUT
+   Uses the real hero-garden.png and Hero-equipment.png
+   ========================================================= */
+
+/* Garden */
 .hero-garden {
-  background-image: url("/Rob-tom-irrigation/hero-garden.png") !important;
-  background-size: contain !important;
-background-position: right center !important;
-  background-repeat: no-repeat !important;
+    position: absolute !important;
+    z-index: 0 !important;
+
+    background-image: url("/Rob-tom-irrigation/hero-garden.png") !important;
+    background-size: contain !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-color: transparent !important;
 }
 
-.hero::after {
-  display: none !important;
+/* Keep text/buttons above both images */
+.hero-content {
+    position: relative;
+    z-index: 5 !important;
 }
-/* FINAL BENEFITS PANEL POSITION */
+
+.hero-actions {
+    position: relative;
+    z-index: 6 !important;
+}
+
+/* Equipment */
+.hero-equipment {
+    position: absolute !important;
+
+    /* nearly same tablet size in both orientations */
+    width: min(520px, 72vw) !important;
+
+    left: 2% !important;
+    bottom: 55px !important;
+
+    /* behind the text/buttons, but above garden */
+    z-index: 2 !important;
+
+    pointer-events: none;
+}
+
+.hero-equipment img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+/* No artificial white fade over the garden */
+.hero::after {
+    display: none !important;
+}
+
+
+/* =========================
+   LANDSCAPE
+   ========================= */
+@media (orientation: landscape) {
+
+    .hero-garden {
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        /* allows garden to extend behind
+           Irrigation / Watering Systems */
+        left: 25% !important;
+    }
+
+    .hero-equipment {
+        width: min(520px, 36vw) !important;
+        left: 3% !important;
+        bottom: 55px !important;
+    }
+}
+
+
+/* =========================
+   PORTRAIT
+   ========================= */
+@media (orientation: portrait) {
+
+    .hero-garden {
+        top: 390px !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        min-height: 520px !important;
+    }
+
+    .hero-equipment {
+        width: min(520px, 72vw) !important;
+        left: 3% !important;
+        bottom: 70px !important;
+    }
+}
+
+
+/* Benefits panel */
 .benefits-panel {
     bottom: -150px !important;
     transform: translateX(-50%) !important;
@@ -1181,10 +1271,4 @@ background-position: right center !important;
 
 .hero {
     margin-bottom: 150px;
-}
-/* FINAL EQUIPMENT POSITION TUNING */
-.hero-equipment {
-    width: min(38vw, 560px) !important;
-    left: 1% !important;
-    bottom: -10px !important;
 }
