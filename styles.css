@@ -1273,3 +1273,10 @@ footer p {
 .hero {
     margin-bottom: 150px;
 }
+@media (orientation: portrait) {
+    .hero-equipment {
+        width: min(430px, 58vw) !important;
+        left: 4% !important;
+        bottom: 55px !important;
+    }
+}
