@@ -1301,3 +1301,13 @@ footer p {
         transform: translateY(120px) !important;
     }
 }
+/* PORTRAIT - equipment position only */
+@media (orientation: portrait) {
+
+    .hero-equipment {
+        top: 820px !important;
+        bottom: auto !important;
+        transform: none !important;
+    }
+
+}
