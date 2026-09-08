@@ -1280,3 +1280,13 @@ footer p {
         bottom: 55px !important;
     }
 }
+@media (orientation: portrait) {
+
+    .hero-actions {
+        transform: translateY(45px) !important;
+    }
+
+    .hero-equipment {
+        transform: translateY(45px) !important;
+    }
+}
