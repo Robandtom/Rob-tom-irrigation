@@ -1322,3 +1322,12 @@ footer p {
         margin-bottom: 230px !important;
     }
 }
+/* PORTRAIT - allow lower hero elements to remain visible */
+@media (orientation: portrait) {
+
+    .hero {
+        overflow: visible !important;
+        margin-bottom: 300px !important;
+    }
+
+}
