@@ -1341,3 +1341,40 @@ footer p {
         margin-bottom: 450px !important;
     }
 }
+/* LANDSCAPE - closer to preferred hero layout */
+@media (orientation: landscape) {
+
+    .hero-equipment {
+        bottom: 35px !important;
+        left: 3% !important;
+        width: min(580px, 41vw) !important;
+        z-index: 2 !important;
+    }
+
+    .benefits-panel {
+        bottom: -40px !important;
+        z-index: 8 !important;
+    }
+
+    .hero {
+        margin-bottom: 90px !important;
+        overflow: visible !important;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 5 !important;
+    }
+
+    .hero h1 {
+        text-shadow:
+            0 0 10px rgba(255,255,255,0.95),
+            0 0 18px rgba(255,255,255,0.85);
+    }
+
+    .hero-description {
+        text-shadow:
+            0 0 8px rgba(255,255,255,0.95),
+            0 0 14px rgba(255,255,255,0.85);
+    }
+}
