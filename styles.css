@@ -1378,3 +1378,26 @@ footer p {
             0 0 14px rgba(255,255,255,0.85);
     }
 }
+/* LANDSCAPE - improve small text readability over garden */
+@media (orientation: landscape) {
+
+    .hero-description {
+        position: relative;
+        z-index: 6 !important;
+
+        background: linear-gradient(
+            90deg,
+            rgba(255,255,255,0.96) 0%,
+            rgba(255,255,255,0.90) 55%,
+            rgba(255,255,255,0.55) 78%,
+            rgba(255,255,255,0) 100%
+        );
+
+        padding: 5px 18px 5px 0;
+        border-radius: 0 12px 12px 0;
+
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #ffffff;
+    }
+}
