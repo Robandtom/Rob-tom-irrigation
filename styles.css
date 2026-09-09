@@ -1399,3 +1399,124 @@ footer p {
              0 0 16px rgba(255,255,255,0.95);
     }
 }
+/* =========================================
+   SERVICE PAGE COMPARISON + QUOTE
+   ========================================= */
+
+.compare-mobile {
+  display: none;
+}
+
+.compare {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.compare th,
+.compare td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid #dfe9ee;
+}
+
+.compare th {
+  font-weight: 800;
+}
+
+.compare th:nth-child(2) {
+  color: #0b7645;
+  background: #edf8f1;
+}
+
+.compare th:nth-child(3) {
+  color: #176fc2;
+  background: #eef6fd;
+}
+
+.quote-panel {
+  padding: 28px 0 42px;
+}
+
+.quote-panel-inner {
+  background: #eef7fd;
+  border-radius: 22px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.quote-panel h2 {
+  margin: 0 0 8px;
+}
+
+.quote-panel p {
+  margin: 0;
+}
+
+.quote-button {
+  flex-shrink: 0;
+  min-width: 250px;
+  min-height: 58px;
+}
+
+
+/* MOBILE / NARROW TABLET */
+
+@media (max-width: 700px) {
+
+  .compare-wide {
+    display: none;
+  }
+
+  .compare-mobile {
+    display: grid;
+    gap: 12px;
+  }
+
+  .compare-card {
+    background: #ffffff;
+    border: 1px solid #dfe9ee;
+    border-radius: 14px;
+    padding: 15px 17px;
+    box-shadow: 0 5px 16px rgba(18, 52, 66, 0.05);
+  }
+
+  .compare-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #173d50;
+    font-size: 17px;
+  }
+
+  .compare-card span {
+    display: block;
+    margin: 4px 0;
+    line-height: 1.45;
+  }
+
+  .compare-card span:first-of-type b {
+    color: #0b7645;
+  }
+
+  .compare-card span:last-of-type b {
+    color: #176fc2;
+  }
+
+  .quote-panel-inner {
+    display: block;
+    padding: 24px 20px;
+  }
+
+  .quote-button {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    min-width: 0;
+  }
+}
