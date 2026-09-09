@@ -1331,3 +1331,13 @@ footer p {
     }
 
 }
+/* PORTRAIT - move benefits panel lower */
+@media (orientation: portrait) {
+    .benefits-panel {
+        bottom: -300px !important;
+    }
+
+    .hero {
+        margin-bottom: 450px !important;
+    }
+}
