@@ -1520,3 +1520,90 @@ footer p {
     min-width: 0;
   }
 }
+/* =========================================
+   SIMPLE CONTACT PAGE
+   ========================================= */
+
+.contact-simple {
+  padding: 10px 0 70px;
+}
+
+.contact-simple-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 28px 0;
+}
+
+.contact-icon {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #eef7fd;
+
+  color: #1772cf;
+  font-size: 32px;
+}
+
+.contact-simple-item h2 {
+  margin: 0 0 7px;
+  color: #173d50;
+}
+
+.contact-simple-item p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.contact-simple-item a {
+  color: #1772cf;
+  text-decoration: none;
+}
+
+.contact-closing {
+  margin-top: 45px;
+  padding-top: 32px;
+
+  border-top: 1px solid #dce9f0;
+
+  text-align: center;
+}
+
+.contact-closing p {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: #173d50;
+}
+
+.contact-closing strong {
+  color: #0b7645;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+
+  .contact-simple-item {
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+    font-size: 26px;
+  }
+
+  .contact-simple-item p {
+    font-size: 18px;
+  }
+}
