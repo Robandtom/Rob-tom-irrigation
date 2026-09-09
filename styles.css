@@ -1311,3 +1311,14 @@ footer p {
     }
 
 }
+/* PORTRAIT - lower the information/benefits bar */
+@media (orientation: portrait) {
+
+    .benefits-panel {
+        bottom: -230px !important;
+    }
+
+    .hero {
+        margin-bottom: 230px !important;
+    }
+}
