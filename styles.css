@@ -1172,7 +1172,7 @@ footer p {
     position: absolute !important;
     z-index: 0 !important;
 
-    background-image: url("/Rob-tom-irrigation/hero-garden.png") !important;
+    background-image: url("hero-garden.png") !important;
     background-size: contain !important;
     background-position: right center !important;
     background-repeat: no-repeat !important;
