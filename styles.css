@@ -1754,3 +1754,7 @@ footer p {
         font-size: 24px;
     }
 }
+/* Reduce gap above About section */
+.about-home {
+    padding-top: 45px;
+}
