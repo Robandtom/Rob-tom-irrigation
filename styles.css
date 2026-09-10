@@ -1675,3 +1675,82 @@ footer p {
     display: none !important;
   }
 }
+/* =========================================================
+   ABOUT ROB & TOM - HOMEPAGE
+   ========================================================= */
+
+.about-home {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.about-home-inner {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.about-home-heading {
+    margin-bottom: 28px;
+}
+
+.about-home-heading .eyebrow {
+    color: #08764f;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.about-home-heading h2 {
+    margin: 0;
+    color: #173f50;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+}
+
+.about-home-text {
+    max-width: 900px;
+}
+
+.about-home-text p {
+    color: #405965;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+
+.about-home-tagline {
+    display: block;
+    margin-top: 30px;
+    color: #168454;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    line-height: 1.25;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* About section - tablet and mobile */
+@media (max-width: 768px) {
+    .about-home {
+        padding: 55px 0;
+    }
+
+    .about-home-heading {
+        margin-bottom: 22px;
+    }
+
+    .about-home-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-home-text p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .about-home-tagline {
+        margin-top: 25px;
+        font-size: 24px;
+    }
+}
