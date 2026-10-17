@@ -45,6 +45,19 @@
     @media(max-width:600px){.work-compare{grid-template-columns:1fr}.comparison-pair{gap:8px}.comparison-pair .work-card figcaption{font-size:.8rem}}
     @media(max-width:430px){.work-gallery{grid-template-columns:1fr}.work-stage-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
   </style>
+
+  <style>
+    .work-card img { cursor: zoom-in; }
+    .photo-lightbox[hidden] { display: none; }
+    .photo-lightbox { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,.94); display: flex; align-items: center; justify-content: center; padding: 56px 54px 70px; box-sizing: border-box; }
+    .photo-lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .photo-lightbox button { position: absolute; border: 0; border-radius: 50%; background: rgba(255,255,255,.17); color: white; font-size: 30px; width: 44px; height: 44px; cursor: pointer; }
+    .photo-lightbox .lb-close { top: 12px; right: 14px; }
+    .photo-lightbox .lb-prev { left: 6px; top: 50%; transform: translateY(-50%); }
+    .photo-lightbox .lb-next { right: 6px; top: 50%; transform: translateY(-50%); }
+    .photo-lightbox .lb-caption { position: absolute; bottom: 20px; color: white; font-size: 15px; text-align: center; padding: 0 15px; }
+    @media (max-width: 600px) { .photo-lightbox { padding: 56px 38px 72px; } }
+  </style>
 </head>
 <body>
   <div class="topbar"><div class="wrap topbar-inner"><span>Garden irrigation across London, Berkshire &amp; Surrey</span><span>☎ &nbsp; Call 07732 998076 or 07564 706702</span></div></div>
@@ -119,10 +132,66 @@
     </div>
   </main>
   <footer><div class="wrap footer-inner"><div><strong>Rob &amp; Tom Garden Irrigation</strong><p>London • Berkshire • Surrey</p></div><div><p>07732 998076</p><p>07564 706702</p></div></div></footer>
+
+  <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photograph" hidden>
+    <button type="button" class="lb-close" aria-label="Close photograph">&times;</button>
+    <button type="button" class="lb-prev" aria-label="Previous photograph">&#8249;</button>
+    <img alt="">
+    <button type="button" class="lb-next" aria-label="Next photograph">&#8250;</button>
+    <div class="lb-caption" aria-live="polite"></div>
+  </div>
   <script>
     const menuButton=document.querySelector('.menu-btn');
     const navLinks=document.querySelector('.nav-links');
     if(menuButton&&navLinks){menuButton.addEventListener('click',function(){navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(navLinks.classList.contains('open')));});}
+
+    // All installation and comparison photographs can be enlarged and browsed.
+    (function () {
+      const photos = Array.from(document.querySelectorAll('.work-card img'));
+      const overlay = document.getElementById('photo-lightbox');
+      const enlarged = overlay.querySelector('img');
+      const caption = overlay.querySelector('.lb-caption');
+      let index = 0;
+      let previousFocus = null;
+      function show(i) {
+        index = (i + photos.length) % photos.length;
+        const original = photos[index];
+        enlarged.src = original.currentSrc || original.src;
+        enlarged.alt = original.alt || 'Garden irrigation photograph';
+        const date = original.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || '';
+        caption.textContent = date;
+      }
+      function close() {
+        overlay.hidden = true;
+        document.body.style.overflow = '';
+        enlarged.removeAttribute('src');
+        if (previousFocus) previousFocus.focus();
+      }
+      photos.forEach((photo, i) => {
+        photo.tabIndex = 0;
+        photo.setAttribute('role', 'button');
+        photo.setAttribute('aria-label', 'Enlarge: ' + (photo.alt || 'photograph'));
+        function open() {
+          previousFocus = document.activeElement;
+          show(i);
+          overlay.hidden = false;
+          document.body.style.overflow = 'hidden';
+          overlay.querySelector('.lb-close').focus();
+        }
+        photo.addEventListener('click', open);
+        photo.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      overlay.querySelector('.lb-close').addEventListener('click', close);
+      overlay.querySelector('.lb-prev').addEventListener('click', () => show(index - 1));
+      overlay.querySelector('.lb-next').addEventListener('click', () => show(index + 1));
+      overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+      document.addEventListener('keydown', e => {
+        if (overlay.hidden) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') show(index - 1);
+        else if (e.key === 'ArrowRight') show(index + 1);
+      });
+    })();
   </script>
 </body>
 </html>
