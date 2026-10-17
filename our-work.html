@@ -23,6 +23,13 @@
     .work-note{background:#f0f7fb;border-radius:16px;padding:18px 20px;color:#45606e;margin-top:22px}
     .work-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
     .work-compare .work-card img{aspect-ratio:4/3}
+    .comparison-pairs{display:grid;gap:24px}
+    .comparison-headings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:14px}
+    .comparison-headings h3{text-align:center;color:#183c4a;font-size:1.15rem;margin:0}
+    .photo-date{font-size:.85rem!important;font-weight:400!important;color:#64757b!important;text-align:center}
+    .comparison-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .comparison-pair .work-card img{aspect-ratio:4/3;object-fit:contain;background:#f6faf9}
+    img.full-bed-photo{object-fit:contain!important;background:#f6faf9}
     .garden-project{margin:25px 0 35px}
     .garden-project h3{font-size:1.35rem;color:#183c4a;margin:0 0 16px}
     .work-stage{background:#f6faf9;border:1px solid #e1e9e8;border-radius:18px;padding:16px;min-width:0}
@@ -35,7 +42,7 @@
     .work-cta p{margin:0;color:#45606e}
     .work-cta a{display:inline-block;background:#1879cc;color:#fff;padding:14px 23px;border-radius:50px;text-decoration:none;font-weight:700;white-space:nowrap}
     @media(max-width:720px){.work-page{padding:35px 0 55px}.work-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.work-compare{gap:12px}.work-card figcaption{padding:11px;font-size:.85rem}.work-cta{display:block}.work-cta a{margin-top:18px}.work-intro{margin-bottom:35px}}
-    @media(max-width:600px){.work-compare{grid-template-columns:1fr}}
+    @media(max-width:600px){.work-compare{grid-template-columns:1fr}.comparison-pair{gap:8px}.comparison-pair .work-card figcaption{font-size:.8rem}}
     @media(max-width:430px){.work-gallery{grid-template-columns:1fr}.work-stage-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
   </style>
 </head>
@@ -67,41 +74,46 @@
         <h2 id="installations-title">Our Installations</h2>
         <p>Real projects, real gardens. Explore how we install carefully planned watering systems, step by step.</p>
         <div class="work-gallery">
-          <!-- ADD NEW INSTALLATION PHOTOS HERE. Example:
-          <figure class="work-card"><img src="images/work/installation-01.jpg" alt="Irrigation pipe installation" loading="lazy"><figcaption>Installing the irrigation system</figcaption></figure>
-          -->
-          <!-- ADD THE FIRST VIDEO HERE WHEN IT HAS BEEN UPLOADED. Example:
-          <figure class="work-card"><video controls preload="metadata" playsinline><source src="images/work/installation-video.mp4" type="video/mp4">Your browser does not support video.</video><figcaption>Installation in progress</figcaption></figure>
-          -->
+          <figure class="work-card"><img src="images/work/work-3719.jpg" alt="Installing irrigation along the garden boundary" loading="lazy"><figcaption class="photo-date">October 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3721.jpg" alt="Preparing the irrigation pipe route" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3722.jpg" alt="Installation work around a raised flower bed" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3723.jpg" alt="Laying pipework across the garden" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3724.jpg" alt="Tools and pipework during installation" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3725.jpg" alt="Working on irrigation in a formal garden" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3726.jpg" alt="Pipe entry into a raised flower bed" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3727.jpg" alt="Fitting irrigation within the planting" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3734.jpg" alt="Installing irrigation beside garden steps" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3738.jpg" alt="Drip irrigation fitted along a planted border" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><img src="images/work/work-3739.jpg" alt="Working on a flower bed beside a brick wall" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" poster="images/work/installation-video-poster.jpg"><source src="images/work/installation-video.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Installation in progress — video</figcaption></figure>
         </div>
-        <div class="work-note">Photographs and installation videos will be added here as we prepare each project.</div>
       </section>
       <section class="work-section" aria-labelledby="difference-title">
         <h2 id="difference-title">See the Difference</h2>
         <p>See how gardens develop over time, with photographs taken during installation and again after the watering system has been in use.</p>
-        <!-- Repeat this project block for each new garden. -->
-        <article class="garden-project" aria-label="Garden project 1">
-          <h3>Garden Project 1</h3>
-          <div class="work-compare">
-            <div class="work-stage">
-              <h4>At Installation</h4>
-              <div class="work-gallery work-stage-gallery">
-                <!-- Add photos here, for example:
-                <figure class="work-card"><img src="images/work/project-1-installation-01.jpg" alt="Garden at installation" loading="lazy"><figcaption><span class="work-date">July 2026</span><div>Garden at installation</div></figcaption></figure>
-                -->
-              </div>
-            </div>
-            <div class="work-stage">
-              <h4>After Installation</h4>
-              <div class="work-gallery work-stage-gallery">
-                <!-- Add photos here, for example:
-                <figure class="work-card"><img src="images/work/project-1-after-01.jpg" alt="Garden following installation" loading="lazy"><figcaption><span class="work-date">October 2026</span><div>Three months later</div></figcaption></figure>
-                -->
-              </div>
-            </div>
+        <div class="comparison-headings"><h3>At Installation</h3><h3>After Installation</h3></div>
+        <div class="comparison-pairs">
+          <div class="comparison-pair">
+            <figure class="work-card"><img src="images/work/installation-01.jpg" alt="Garden area 1 at installation" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+            <figure class="work-card"><img src="images/work/after-01.jpg" alt="Matching garden area 1 after installation" loading="lazy"><figcaption class="photo-date">October 2026</figcaption></figure>
           </div>
-        </article>
-        <div class="work-note">Project photographs will appear here, grouped by garden and stage. Each photo can have its own date and description.</div>
+          <div class="comparison-pair">
+            <figure class="work-card"><img src="images/work/installation-02.jpg" alt="Garden area 2 at installation" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+            <figure class="work-card"><img src="images/work/after-02.jpg" alt="Matching garden area 2 after installation" loading="lazy"><figcaption class="photo-date">October 2026</figcaption></figure>
+          </div>
+          <div class="comparison-pair">
+            <figure class="work-card"><img src="images/work/installation-03.jpg" alt="Garden area 3 at installation" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+            <figure class="work-card"><img src="images/work/after-03.jpg" alt="Matching garden area 3 after installation" loading="lazy"><figcaption class="photo-date">October 2026</figcaption></figure>
+          </div>
+          <div class="comparison-pair">
+            <figure class="work-card"><img class="full-bed-photo" src="images/work/installation-04.jpg" alt="Garden area 4 at installation" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+            <figure class="work-card"><img src="images/work/after-04.jpg" alt="Matching garden area 4 after installation" loading="lazy"><figcaption class="photo-date">October 2026</figcaption></figure>
+          </div>
+          <div class="comparison-pair">
+            <figure class="work-card"><img src="images/work/installation-05.jpg" alt="Installing irrigation in a colourful sloping garden" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+            <figure class="work-card"><img src="images/work/after-05.jpg" alt="The landscaped terraced garden after irrigation installation" loading="lazy"><figcaption class="photo-date">August 2026</figcaption></figure>
+          </div>
+        </div>
       </section>
       <section class="work-cta" aria-label="Get a quote"><div><h2>Let's talk about your garden</h2><p>Contact Rob &amp; Tom to discuss an irrigation system tailored to your garden.</p></div><a href="contact.html">Request a Free Quote →</a></section>
     </div>
