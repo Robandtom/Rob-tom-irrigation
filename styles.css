@@ -1758,3 +1758,147 @@ footer p {
 .about-home {
     padding-top: 45px;
 }
+
+/* =========================================================
+   APPROVED PREVIEW: portrait spacing and blue intro statement
+   27 October 2026. Desktop and landscape are unchanged.
+   ========================================================= */
+.intro-statement {
+  color: #1675cf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(24px, 3.2vw, 34px);
+  line-height: 1.2;
+  margin: 0 0 42px;
+  max-width: 1080px;
+}
+.areas-we-cover p + p { margin-top: 12px; }
+@media (orientation: portrait) {
+  /* Put the two CTAs lower, within the garden photograph. */
+  .hero-actions { transform: translateY(230px) !important; }
+  /* Close the excessive white gap after the four benefits. */
+  .hero { margin-bottom: 335px !important; }
+  .intro-section { padding-top: 32px !important; }
+  /* Leave deliberate breathing room below the blue statement. */
+  .intro-statement { margin-bottom: 42px; }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  .hero-actions { transform: translateY(160px) !important; }
+  .hero { margin-bottom: 330px !important; }
+  .intro-statement { font-size: 24px; }
+}
+
+/* Approved mobile refinement: 27 Oct 2026 */
+@media (orientation: portrait) {
+  /* Lower both hero buttons further without affecting landscape. */
+  .hero-actions { transform: translateY(315px) !important; }
+  /* Keep benefits cleanly integrated into the white page. */
+  .benefits-panel {
+    background: #fff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  /* A little less white space after the benefits. */
+  .hero { margin-bottom: 305px !important; }
+  .intro-section { padding-top: 20px !important; }
+  /* Match the approved design: modest gap before green eyebrow. */
+  .intro-statement { margin-bottom: 24px !important; }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  .hero-actions { transform: translateY(245px) !important; }
+  .hero { margin-bottom: 300px !important; }
+}
+
+
+/* 27 Oct: phone-only hero action fix. Keep tablet/desktop unchanged. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero-actions {
+    transform: none !important;
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin-top: 18px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .hero-actions .btn {
+    width: auto !important;
+    flex: 0 1 auto !important;
+    min-height: 42px !important;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+
+/* Narrow phones ONLY: raise the four benefits and remove all outer shadows.
+   Tablet portrait and all landscape layouts remain untouched. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .benefits-panel {
+    bottom: -100px !important;
+    background: #fff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+  .hero {
+    margin-bottom: 130px !important;
+  }
+  .intro-section {
+    padding-top: 20px !important;
+  }
+}
+
+
+/* 27 Oct: cleaner, continuous white homepage sections.
+   Keep the three service cards deliberately unchanged. */
+.benefits-panel {
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  padding: 12px 0 !important;
+  column-gap: 0 !important;
+}
+.benefit {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 8px;
+}
+.technology-section,
+.hosepipe-section,
+.areas-we-cover,
+.about-home,
+.intro-section {
+  background: #fff !important;
+  background-image: none !important;
+}
+.hosepipe-box {
+  background: #fff !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 24px 0 !important;
+}
+.technology-section .feature-list li {
+  background: #fff !important;
+  box-shadow: none !important;
+}
+.intro-section { padding-top: 48px; padding-bottom: 48px; }
+.technology-section { padding-top: 50px; padding-bottom: 50px; }
+.hosepipe-section { padding-top: 38px; padding-bottom: 38px; }
+.about-home { padding-top: 40px; padding-bottom: 48px; }
+@media screen and (min-width: 701px) and (orientation: landscape) {
+  .benefits-panel { padding: 8px 0 !important; }
+  .benefit { padding: 8px 7px !important; gap: 7px; }
+}
