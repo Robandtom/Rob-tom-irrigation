@@ -1902,3 +1902,68 @@ footer p {
   .benefits-panel { padding: 8px 0 !important; }
   .benefit { padding: 8px 7px !important; gap: 7px; }
 }
+
+/* Phone portrait only: equipment in front of benefits, with readable labels. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero { overflow: visible !important; isolation: auto !important; }
+  .hero-equipment {
+    z-index: 30 !important;
+    bottom: -35px !important;
+    left: 1% !important;
+    transform: none !important;
+    width: min(430px, 58vw) !important;
+  }
+  .benefits-panel {
+    z-index: 10 !important;
+    padding-top: 95px !important;
+  }
+}
+
+/* Phone portrait only — reduce white benefits panel overlap with equipment. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .benefits-panel {
+    bottom: -145px !important; /* lower panel 45px, uncover equipment */
+    padding-top: 45px !important; /* less empty white space above benefit text */
+  }
+  .hero { margin-bottom: 175px !important; }
+}
+
+
+/* 28 Oct: phone portrait equipment must overlap IN FRONT of benefits.
+   Override old portrait top:820px and competing bottom offsets. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero { overflow: visible !important; isolation: auto !important; margin-bottom: 185px !important; }
+  .hero-equipment {
+    position: absolute !important;
+    top: auto !important;
+    bottom: -68px !important;
+    left: 1% !important;
+    width: min(430px, 58vw) !important;
+    transform: none !important;
+    z-index: 50 !important;
+    overflow: visible !important;
+  }
+  .hero-equipment img { display: block !important; width: 100% !important; height: auto !important; object-fit: contain !important; }
+  .benefits-panel {
+    bottom: -165px !important;
+    z-index: 10 !important;
+    padding-top: 82px !important;
+  }
+}
+
+/* 28 Oct — phone portrait: equipment above benefits, no clipping.
+   Scoped to narrow portrait phones; all other layouts remain untouched. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero { position: relative !important; overflow: visible !important; isolation: isolate !important; }
+  .hero-equipment {
+    position: absolute !important; top: auto !important; bottom: -68px !important;
+    left: 1% !important; width: min(430px, 58vw) !important;
+    transform: none !important; z-index: 100 !important;
+    visibility: visible !important; overflow: visible !important;
+  }
+  .hero-equipment img { display: block !important; width: 100% !important; height: auto !important; object-fit: contain !important; }
+  .benefits-panel {
+    z-index: 1 !important; bottom: -165px !important;
+    padding-top: 105px !important;
+  }
+}
