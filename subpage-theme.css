@@ -1,0 +1,50 @@
+
+/* Rob & Tom — colour and typography for interior pages only.
+   Loaded after styles.css; homepage is deliberately excluded. */
+:root { --rt-blue:#1976cc; --rt-green:#08794c; --rt-deep:#06472f; --rt-ink:#24465a; --rt-pale:#f1f9fc; }
+body { color:var(--rt-ink); background:#fff; }
+.topbar { background:linear-gradient(90deg,#2074c8,#1768b8); color:#fff; }
+.topbar > .wrap { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px 22px; padding-top:12px; padding-bottom:12px; font-size:14px; }
+body > header:not(.site-header) { background:#fff; border-bottom:1px solid #e1edf2; }
+body > header:not(.site-header) .nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding-top:15px; padding-bottom:15px; }
+body > header:not(.site-header) .brand { display:flex; align-items:center; gap:10px; }
+body > header:not(.site-header) .brand b { display:block; color:#136b9f; font-size:clamp(21px,3vw,29px); }
+body > header:not(.site-header) .brand small { display:block; color:var(--rt-green); font-weight:700; letter-spacing:.09em; }
+body > header:not(.site-header) nav ul { list-style:none; display:flex; align-items:center; flex-wrap:wrap; gap:14px; padding:0; margin:0; }
+body > header:not(.site-header) nav a { font-size:14px; font-weight:700; color:#24465a; }
+body > header:not(.site-header) nav a.active, body > header:not(.site-header) nav a:hover { color:var(--rt-blue); }
+body > header:not(.site-header) .menu-btn { display:none; }
+.page-hero { background:linear-gradient(135deg,#f3fafc 0%,#fff 57%,#eff8f1 100%); border-bottom:1px solid #e5eff1; padding:clamp(40px,7vw,78px) 0; }
+.page-hero .eyebrow,.work-eyebrow { color:var(--rt-green); text-transform:uppercase; font-weight:800; letter-spacing:.16em; font-size:.82rem; }
+.page-hero h1,.work-page h1 { color:var(--rt-green)!important; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-weight:500; font-size:clamp(2.25rem,5vw,4.2rem); line-height:1.12; margin:14px 0 20px; }
+.page-hero .lead { color:#3e5a6b; max-width:800px; font-size:clamp(1.1rem,2.2vw,1.35rem); line-height:1.7; }
+main > section:not(.page-hero):not(.quote-panel), .work-page { padding-top:clamp(28px,5vw,54px); padding-bottom:clamp(28px,5vw,54px); }
+main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:20px; }
+.card,.compare-card { background:#fff; border:1px solid #dcebf0; border-radius:18px; padding:25px; box-shadow:0 8px 26px rgba(19,90,120,.06); }
+.card h3 { color:var(--rt-deep); margin-top:0; }
+.card p,.split p { line-height:1.7; }
+.soft { background:var(--rt-pale); }
+.split { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:36px; align-items:center; }
+.checks { line-height:2; padding-left:22px; }
+.checks li::marker { color:var(--rt-green); }
+.btn.btn-primary,.quote-button { background:#1976cc; color:#fff; border-radius:999px; padding:15px 24px; font-weight:800; display:inline-block; box-shadow:0 10px 22px rgba(25,118,204,.16); }
+.btn.btn-primary:hover,.quote-button:hover { background:#0e63af; }
+.quote-panel { background:linear-gradient(110deg,#eaf6ff,#eaf8f1); padding:36px 0; }
+.quote-panel-inner { display:flex; align-items:center; justify-content:space-between; gap:25px; }
+.quote-panel h2 { color:var(--rt-green)!important; }
+.contact-simple-item { border-left:4px solid var(--rt-blue); padding:16px 20px; background:#f4fafc; border-radius:0 14px 14px 0; }
+.contact-simple-item h2 { color:var(--rt-green)!important; }
+.work-page h2 { color:#166eaa!important; }
+.work-page .work-cta { background:linear-gradient(115deg,#edf7ff,#effaf3); border-radius:18px; }
+.work-page .work-card { border-color:#dcebf0; }
+@media(max-width:700px) {
+  .topbar > .wrap { font-size:12px; }
+  body > header:not(.site-header) .nav { gap:10px; }
+  body > header:not(.site-header) nav { width:100%; }
+  body > header:not(.site-header) nav ul { gap:9px 15px; }
+  body > header:not(.site-header) nav a { font-size:13px; }
+  .split { grid-template-columns:1fr; gap:16px; }
+  .quote-panel-inner { flex-direction:column; align-items:flex-start; }
+  .page-hero { padding:36px 0; }
+}
