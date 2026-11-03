@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Explore real garden irrigation installations by Rob &amp; Tom, including work in progress and garden updates after installation." name="description"/>
 <title>Our Work | Rob &amp; Tom Garden Irrigation</title>
-<link href="styles.css?v=2" rel="stylesheet"/><link href="subpage-theme.css" rel="stylesheet">
+<link href="styles.css?v=2" rel="stylesheet"/><link href="subpage-theme.css" rel="stylesheet"/>
 <style>
     .work-page{color:#233d4a;padding:52px 0 75px}
     .work-page .work-container{width:min(1120px,calc(100% - 36px));margin:auto}
@@ -78,7 +78,17 @@
     .video-lightbox button{position:absolute;top:12px;right:14px;border:0;border-radius:50%;
       background:#444;color:white;width:44px;height:44px;font-size:30px;cursor:pointer}
   </style>
-</head>
+<style>
+/* Unified Our Work gallery: preserve photo proportions and readable captions. */
+.refreshed-gallery{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.refreshed-gallery .work-card img,.refreshed-pair .work-card img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important;background:transparent!important}
+.refreshed-gallery .work-card figcaption,.refreshed-pair .work-card figcaption,.video-card figcaption{font-size:.96rem;font-weight:500;line-height:1.55;color:#284d55;text-align:left;padding:16px 18px}
+.refreshed-pair{margin-top:24px;align-items:start}
+.refreshed-pair .work-card{min-width:0}
+.video-card{max-width:560px;margin:26px auto 0}
+.video-card video{aspect-ratio:4/3;object-fit:contain;background:#eaf2ee}
+@media(max-width:650px){.refreshed-gallery{grid-template-columns:1fr}.refreshed-pair{gap:10px}.refreshed-pair .work-card figcaption{font-size:.8rem;padding:10px;line-height:1.45}}
+</style></head>
 <body>
 <div class="topbar"><div class="wrap topbar-inner"><span>Garden irrigation across London, Berkshire &amp; Surrey</span><span>☎   Call 07732 998076 or 07564 706702</span></div></div>
 <header class="site-header">
@@ -103,46 +113,9 @@
 <p class="work-eyebrow">Rob &amp; Tom</p>
 <h1>Our Work</h1>
 <p class="work-intro">A closer look at our garden irrigation installations — from the work behind the scenes to the gardens enjoying the benefits.</p>
-<section aria-labelledby="installations-title" class="work-section">
-<h2 id="installations-title">Our Installations</h2>
-<p>Real projects, real gardens. Explore how we install carefully planned watering systems, step by step.</p>
-<div class="work-gallery">
-<figure class="work-card"><img alt="Installing irrigation along the garden boundary" loading="lazy" src="images/work/work-3719.jpg"/><figcaption class="photo-date">October 2026</figcaption></figure>
-<figure class="work-card"><img alt="Preparing the irrigation pipe route" loading="lazy" src="images/work/work-3721.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-
-<figure class="work-card"><img alt="Laying pipework across the garden" loading="lazy" src="images/work/work-3723.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-<figure class="work-card"><img alt="Tools and pipework during installation" loading="lazy" src="images/work/work-3724.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
 
 
-<figure class="work-card"><img alt="Fitting irrigation within the planting" loading="lazy" src="images/work/work-3727.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-
-<figure class="work-card"><img alt="Drip irrigation fitted along a planted border" loading="lazy" src="images/work/work-3738.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-<figure class="work-card"><img alt="Working on a flower bed beside a brick wall" loading="lazy" src="images/work/work-3739.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-<figure class="work-card"><video muted="" playsinline="" poster="images/work/installation-video-poster.jpg" preload="metadata" tabindex="0"><source src="images/work/installation-video.mp4" type="video/mp4"/>Your browser does not support video playback.</video><figcaption>Installation in progress — video</figcaption></figure>
-</div>
-</section>
-<section aria-labelledby="difference-title" class="work-section">
-<h2 id="difference-title">See the Difference</h2>
-<p>See how gardens develop over time, with photographs taken during installation and again after the watering system has been in use.</p>
-<div class="comparison-headings"><h3>At Installation</h3><h3>After Installation</h3></div>
-<div class="comparison-pairs">
-
-
-<div class="comparison-pair">
-<figure class="work-card"><img alt="Garden area 3 at installation" loading="lazy" src="images/work/installation-03.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-<figure class="work-card"><img alt="Matching garden area 3 after installation" loading="lazy" src="images/work/after-03.jpg"/><figcaption class="photo-date">October 2026</figcaption></figure>
-</div>
-<div class="comparison-pair">
-<figure class="work-card"><img alt="Garden area 4 at installation" class="full-bed-photo" loading="lazy" src="images/work/installation-04.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-<figure class="work-card"><img alt="Matching garden area 4 after installation" loading="lazy" src="images/work/after-04.jpg"/><figcaption class="photo-date">October 2026</figcaption></figure>
-</div>
-<div class="comparison-pair">
-<figure class="work-card"><img alt="Installing irrigation in a colourful sloping garden" loading="lazy" src="images/work/installation-05.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-<figure class="work-card"><img alt="The landscaped terraced garden after irrigation installation" loading="lazy" src="images/work/after-05.jpg"/><figcaption class="photo-date">August 2026</figcaption></figure>
-</div>
-</div>
-</section>
-<section aria-label="Get a quote" class="work-cta"><div><h2>Let's talk about your garden</h2><p>Contact Rob &amp; Tom to discuss an irrigation system tailored to your garden.</p></div><a href="contact.html">Request a Free Quote →</a></section>
+<section aria-label="Our irrigation installations and results" class="work-section"><div class="work-gallery refreshed-gallery"><figure class="work-card"><img alt="During this above-ground irrigation installation, the non-drip supply line disappears beneath the gravel driveway, reappearing in the flower bed to connect to the dripline." decoding="async" loading="lazy" src="images/work/gallery-5005.jpg"/><figcaption>During this above-ground irrigation installation, the non-drip supply line disappears beneath the gravel driveway, reappearing in the flower bed to connect to the dripline.</figcaption></figure><figure class="work-card"><img alt="Even between flower beds and across garden pathways, we conceal non-drip supply lines underground wherever practical, keeping the installation neat and discreet." decoding="async" loading="lazy" src="images/work/gallery-5009.jpg"/><figcaption>Even between flower beds and across garden pathways, we conceal non-drip supply lines underground wherever practical, keeping the installation neat and discreet.</figcaption></figure><figure class="work-card"><img alt="Where groundwork is required, we always aim to use the least invasive methods, avoiding heavy machinery wherever possible to minimise disruption to the existing garden." decoding="async" loading="lazy" src="images/work/gallery-5007.jpg"/><figcaption>Where groundwork is required, we always aim to use the least invasive methods, avoiding heavy machinery wherever possible to minimise disruption to the existing garden.</figcaption></figure><figure class="work-card"><img alt="Careful planning and organised groundwork help us minimise disruption, keep your garden tidy and reduce installation time." decoding="async" loading="lazy" src="images/work/gallery-5011.jpg"/><figcaption>Careful planning and organised groundwork help us minimise disruption, keep your garden tidy and reduce installation time.</figcaption></figure><figure class="work-card"><img alt="Creating the above-ground drip irrigation network before securing it with ground stakes." decoding="async" loading="lazy" src="images/work/gallery-5012.jpg"/><figcaption>Creating the above-ground drip irrigation network before securing it with ground stakes.</figcaption></figure><figure class="work-card"><img alt="Aesthetics matter just as much as functionality. We always aim for neat installations." decoding="async" loading="lazy" src="images/work/gallery-5013.jpg"/><figcaption>Aesthetics matter just as much as functionality. We always aim for neat installations.</figcaption></figure><figure class="work-card"><img alt="Within a week or so, the irrigation pipework will be barely visible among the growing foliage." decoding="async" loading="lazy" src="images/work/gallery-5014.jpg"/><figcaption>Within a week or so, the irrigation pipework will be barely visible among the growing foliage.</figcaption></figure><figure class="work-card"><img alt="Sloping gardens are no obstacle — drip irrigation can be tailored to work effectively on uneven ground." decoding="async" loading="lazy" src="images/work/gallery-5019.jpg"/><figcaption>Sloping gardens are no obstacle — drip irrigation can be tailored to work effectively on uneven ground.</figcaption></figure><figure class="work-card"><img alt="Carefully installed above-ground irrigation can be remarkably discreet, blending naturally into the garden. Even steps and changes in level are no obstacle to a neat, well-planned installation." decoding="async" loading="lazy" src="images/work/gallery-5020.jpg"/><figcaption>Carefully installed above-ground irrigation can be remarkably discreet, blending naturally into the garden. Even steps and changes in level are no obstacle to a neat, well-planned installation.</figcaption></figure></div><div class="comparison-pair refreshed-pair"><figure class="work-card"><img alt="August 2026 — The rose and surrounding garden on the day of irrigation installation." decoding="async" loading="lazy" src="images/work/gallery-4939.jpg"/><figcaption>August 2026 — The rose and surrounding garden on the day of irrigation installation.</figcaption></figure><figure class="work-card"><img alt="October 2026 — The same rose and surrounding garden, six weeks after installing our irrigation system." decoding="async" loading="lazy" src="images/work/gallery-5016.jpg"/><figcaption>October 2026 — The same rose and surrounding garden, six weeks after installing our irrigation system.</figcaption></figure></div><div class="comparison-pair refreshed-pair"><figure class="work-card"><img alt="August 2026 — Established flower beds on the day of irrigation installation." decoding="async" loading="lazy" src="images/work/gallery-4940.jpg"/><figcaption>August 2026 — Established flower beds on the day of irrigation installation.</figcaption></figure><figure class="work-card"><img alt="October 2026 — The same flower bed after six weeks with our discreet above-ground irrigation system." decoding="async" loading="lazy" src="images/work/gallery-4935.jpg"/><figcaption>October 2026 — The same flower bed after six weeks with our discreet above-ground irrigation system.</figcaption></figure></div><figure class="work-card video-card"><video muted="" playsinline="" poster="images/work/installation-video-poster.jpg" preload="none" tabindex="0"><source src="images/work/installation-video.mp4" type="video/mp4"/></video><figcaption><strong>Adjustable micro-drip emitters in action</strong><p>Our irrigation systems primarily use water-efficient dripline irrigation in flower beds. These adjustable micro-drip emitters are used selectively where a higher volume of water is needed over a shorter period, or where they are better suited to the planting and garden layout.</p><p>Their flow can be adjusted at any time to suit the plants’ needs, helping avoid unnecessary water use.</p></figcaption></figure></section><section aria-label="Get a quote" class="work-cta"><div><h2>Let's talk about your garden</h2><p>Contact Rob &amp; Tom to discuss an irrigation system tailored to your garden.</p></div><a href="contact.html">Request a Free Quote →</a></section>
 </div>
 </main>
 <footer><div class="wrap footer-inner"><div><strong>Rob &amp; Tom Garden Irrigation</strong><p>London • Berkshire • Surrey</p></div><div><p>07732 998076</p><p>07564 706702</p></div></div></footer>
