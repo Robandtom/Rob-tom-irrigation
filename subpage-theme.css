@@ -186,8 +186,8 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
 @media (max-width: 700px) {
   .above-ground-page-hero .above-ground-hero-title h1 span,
   .above-ground-page-hero .above-ground-hero-title h1 span + span {
-    -webkit-text-stroke: 1px rgba(255,255,255,.98);
+    -webkit-text-stroke: 2px rgba(255,255,255,1);
     paint-order: stroke fill;
-    text-shadow: 0 0 3px rgba(255,255,255,1), 0 0 9px rgba(255,255,255,.98), 0 0 18px rgba(255,255,255,.9), 0 2px 3px rgba(0,0,0,.48);
+    text-shadow: 0 0 4px rgba(255,255,255,1), 0 0 12px rgba(255,255,255,1), 0 0 24px rgba(255,255,255,.98), 0 2px 4px rgba(0,0,0,.6);
   }
 }
