@@ -174,3 +174,9 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
   .above-ground-page-copy { padding-top: 18px; padding-bottom: 32px; }
   .above-ground-page-hero .lead { font-size: 24px; }
 }
+
+
+/* Blue accent for the second line of the above-ground hero title. */
+.above-ground-page-hero .above-ground-hero-title h1 span + span {
+  color: #1675cf;
+}
