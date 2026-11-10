@@ -191,3 +191,95 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
     text-shadow: 0 0 4px rgba(255,255,255,1), 0 0 12px rgba(255,255,255,1), 0 0 24px rgba(255,255,255,.98), 0 2px 4px rgba(0,0,0,.6);
   }
 }
+
+
+/* Services hero: the approved team illustration, with the heading over its open left side. */
+.services-page-hero {
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 0;
+}
+.services-hero-art {
+  position: relative;
+  width: min(1320px, 100%);
+  margin: 0 auto;
+}
+.services-hero-art > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.services-hero-title {
+  position: absolute;
+  z-index: 2;
+  top: 9%;
+  left: clamp(22px, 5.2vw, 72px);
+  max-width: 64%;
+}
+.services-hero-eyebrow {
+  margin-bottom: 12px;
+  color: var(--rt-green);
+  font-size: clamp(.7rem, 1vw, .85rem);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.services-hero-title h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.8rem, 6.2vw, 5.25rem);
+  line-height: .98;
+  letter-spacing: -.035em;
+}
+.services-hero-title h1 span {
+  display: block;
+  -webkit-text-stroke: 1px rgba(255,255,255,.92);
+  paint-order: stroke fill;
+  text-shadow: 0 0 2px rgba(255,255,255,.98), 0 0 8px rgba(255,255,255,.98), 0 0 17px rgba(255,255,255,.9), 0 2px 4px rgba(13,55,35,.42);
+}
+.services-hero-title h1 span:first-child { color: #08794c; }
+.services-hero-title h1 span:last-child { color: #1675cf; }
+.services-page-copy {
+  padding-top: clamp(14px, 2vw, 24px);
+  padding-bottom: clamp(28px, 4vw, 46px);
+}
+.services-page-copy .lead {
+  max-width: 1080px;
+  margin: 0;
+  color: #1675cf;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  line-height: 1.25;
+}
+@media (max-width: 700px) {
+  .services-hero-title {
+    top: 7%;
+    left: 4.5%;
+    max-width: 88%;
+  }
+  .services-hero-eyebrow {
+    margin-bottom: 7px;
+    font-size: .66rem;
+    letter-spacing: .14em;
+  }
+  .services-hero-title h1 {
+    gap: 1px;
+    font-size: clamp(1.8rem, 8.1vw, 2.45rem);
+    line-height: 1;
+    letter-spacing: -.035em;
+  }
+  .services-hero-title h1 span {
+    -webkit-text-stroke: 1.5px rgba(255,255,255,1);
+    text-shadow: 0 0 3px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1), 0 0 19px rgba(255,255,255,.98), 0 1px 3px rgba(0,0,0,.42);
+  }
+  .services-page-copy { padding-top: 16px; padding-bottom: 30px; }
+  .services-page-copy .lead { font-size: clamp(1.22rem, 5.8vw, 1.5rem); line-height: 1.28; }
+}
