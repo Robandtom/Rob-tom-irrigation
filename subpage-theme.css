@@ -283,3 +283,95 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
   .services-page-copy { padding-top: 16px; padding-bottom: 30px; }
   .services-page-copy .lead { font-size: clamp(1.22rem, 5.8vw, 1.5rem); line-height: 1.28; }
 }
+
+
+/* Underground hero follows the Above-Ground and Services page treatment. */
+.underground-page-hero {
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 0;
+}
+.underground-hero-art {
+  position: relative;
+  width: min(1320px, 100%);
+  margin: 0 auto;
+}
+.underground-hero-art > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.underground-hero-title {
+  position: absolute;
+  z-index: 2;
+  top: 8%;
+  left: clamp(22px, 5.2vw, 72px);
+  max-width: 62%;
+}
+.underground-hero-title .eyebrow {
+  margin-bottom: 12px;
+  color: #08794c;
+  font-size: clamp(.7rem, 1vw, .85rem);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.underground-hero-title h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.8rem, 6.2vw, 5.25rem);
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+.underground-hero-title h1 span {
+  display: block;
+  -webkit-text-stroke: 1px rgba(255,255,255,.92);
+  paint-order: stroke fill;
+  text-shadow: 0 0 2px rgba(255,255,255,.98), 0 0 8px rgba(255,255,255,.98), 0 0 17px rgba(255,255,255,.9), 0 2px 4px rgba(13,55,35,.42);
+}
+.underground-hero-title h1 span:first-child { color: #08794c; }
+.underground-hero-title h1 span:last-child { color: #1675cf; }
+.underground-page-copy {
+  padding-top: clamp(14px, 2vw, 24px);
+  padding-bottom: clamp(28px, 4vw, 46px);
+}
+.underground-page-copy .lead {
+  max-width: 1080px;
+  margin: 0;
+  color: #1675cf;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(24px, 3.2vw, 34px);
+  line-height: 1.2;
+}
+@media (max-width: 700px) {
+  .underground-hero-title {
+    top: 6%;
+    left: 4.5%;
+    max-width: 91%;
+  }
+  .underground-hero-title .eyebrow {
+    margin-bottom: 7px;
+    font-size: .66rem;
+    letter-spacing: .14em;
+  }
+  .underground-hero-title h1 {
+    gap: 1px;
+    font-size: clamp(1.8rem, 8.1vw, 2.45rem);
+    line-height: 1;
+    letter-spacing: -.035em;
+  }
+  .underground-hero-title h1 span {
+    -webkit-text-stroke: 1.5px rgba(255,255,255,1);
+    text-shadow: 0 0 3px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1), 0 0 19px rgba(255,255,255,.98), 0 1px 3px rgba(0,0,0,.42);
+  }
+  .underground-page-copy { padding-top: 16px; padding-bottom: 30px; }
+  .underground-page-copy .lead { font-size: clamp(1.22rem, 5.8vw, 1.5rem); line-height: 1.28; }
+}
