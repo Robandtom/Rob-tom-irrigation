@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="styles.css?v=2">
 <style>
-/* Preview homepage additions only. Existing site styles and imagery retained. */
+/* Homepage additions. */
 .hero-service-area{color:#22734e;font-size:clamp(.95rem,1.65vw,1.15rem);line-height:1.5;font-weight:650;max-width:690px;margin:10px 0 20px;}
 .what-we-do{margin:28px 0 35px;padding:24px 28px;border-radius:16px;background:#f1f8f5;}
 .what-we-do h2{font-size:clamp(1.45rem,2.5vw,1.9rem);margin:0 0 10px;}
@@ -25,6 +25,25 @@
 .areas-we-cover h2{margin:0 0 12px;}
 .areas-we-cover p{max-width:900px;line-height:1.7;margin:0;}
 @media(max-width:700px){.hero-service-area{font-size:.96rem}.what-we-do{padding:20px}.areas-we-cover{padding:32px 0}}
+
+/* Team illustration: match the Services and Underground heading treatment. */
+.about-home .about-home-inner { max-width:1180px; }
+.about-home-art { position:relative; margin-bottom:28px; }
+.about-home-art > img { width:100%; height:auto; display:block; }
+.about-home-art .about-home-heading { position:absolute; z-index:1; top:7%; left:3%; width:57%; margin:0; }
+.about-home-art .eyebrow { display:block; font-size:clamp(.65rem,1vw,.85rem); letter-spacing:.16em; margin-bottom:12px; }
+.about-home-art h2 { font-family:Georgia,'Times New Roman',serif; font-style:italic; font-weight:500; font-size:clamp(30px,4.5vw,60px); line-height:1.05; letter-spacing:-.03em; }
+.about-home-art h2 span { display:block; -webkit-text-stroke:2px #fff; paint-order:stroke fill; text-shadow:0 0 3px #fff,0 0 10px #fff,0 0 20px rgba(255,255,255,.98); }
+.about-home-art h2 span:nth-child(odd) { color:#08794c; }
+.about-home-art h2 span:nth-child(even) { color:#1675cf; }
+.about-home-art .eyebrow { text-shadow:0 0 4px #fff,0 0 10px #fff; }
+@media(max-width:700px) {
+  .about-home-art { margin-inline:-8px; margin-bottom:22px; }
+  .about-home-art .about-home-heading { top:6%; left:3%; width:65%; }
+  .about-home-art .eyebrow { font-size:clamp(.5rem,1.8vw,.7rem); letter-spacing:.12em; margin-bottom:6px; }
+  .about-home-art h2 { font-size:clamp(22px,5.7vw,40px); line-height:1.03; }
+  .about-home-art h2 span { -webkit-text-stroke:2px #fff; text-shadow:0 0 3px #fff,0 0 8px #fff,0 0 14px #fff; }
+}
 </style>
 </head>
 
@@ -496,9 +515,14 @@
 <section class="about-home">
   <div class="wrap about-home-inner">
 
-    <div class="about-home-heading">
-      <span class="eyebrow">ABOUT ROB &amp; TOM</span>
-      <h2>8 years of experience in garden irrigation.</h2>
+    <div class="about-home-art">
+      <img src="images/rob-tom-about.webp" width="1758" height="894"
+           alt="Illustration of Rob and Tom with garden irrigation pipe and tools"
+           loading="lazy" decoding="async">
+      <div class="about-home-heading">
+        <span class="eyebrow">ABOUT ROB &amp; TOM</span>
+        <h2><span>8 years of experience</span> <span>in garden irrigation.</span></h2>
+      </div>
     </div>
 
     <div class="about-home-text">
