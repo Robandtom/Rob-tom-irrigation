@@ -193,7 +193,7 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
 }
 
 
-/* Services hero: the approved team illustration, with the heading over its open left side. */
+/* Services hero: approved irrigation animation with a live, readable heading. */
 .services-page-hero {
   padding: 0;
   overflow: hidden;
@@ -205,7 +205,8 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
   width: min(1320px, 100%);
   margin: 0 auto;
 }
-.services-hero-art > img {
+.services-hero-art > img,
+.services-hero-art > video {
   display: block;
   width: 100%;
   height: auto;
@@ -374,4 +375,14 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
   }
   .underground-page-copy { padding-top: 16px; padding-bottom: 30px; }
   .underground-page-copy .lead { font-size: clamp(1.22rem, 5.8vw, 1.5rem); line-height: 1.28; }
+}
+
+/* Keep the animated lawn visible beneath the heading on narrow phones. */
+@media (max-width: 700px) {
+  .services-hero-video { margin-top: 95px; }
+  .services-hero-title { top: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-hero-video { visibility: hidden; }
+  .services-hero-art { background: url("images/services-irrigation-poster.webp") center bottom / 100% auto no-repeat; }
 }
