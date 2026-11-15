@@ -1,0 +1,75 @@
+/* Services-only hero: approved hazy gardener above the garden cutaway. */
+.services-page-hero {
+  position: relative;
+}
+.services-page-hero .services-hero-art {
+  width: min(1200px, 100%);
+  background: #fff;
+}
+.services-hero-pictures {
+  position: relative;
+  width: 68%;
+  aspect-ratio: 4 / 5;
+  margin-left: auto;
+  isolation: isolate;
+}
+.services-hero-pictures img {
+  position: absolute;
+  display: block;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+.services-hero-pictures .services-hero-gardener {
+  width: 45%;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+.services-hero-pictures .services-hero-garden {
+  width: 80%;
+  left: 8%;
+  top: 36%;
+  z-index: 1;
+}
+.services-page-hero .services-hero-title {
+  top: clamp(40px, 7vw, 90px);
+  max-width: 80%;
+  z-index: 3;
+}
+.services-page-hero .services-page-copy {
+  position: absolute;
+  top: clamp(290px, 27vw, 350px);
+  left: max(22px, calc((100% - 1090px) / 2));
+  width: min(34%, 390px);
+  padding: 0;
+  z-index: 3;
+}
+.services-page-hero .services-page-copy .lead {
+  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+  line-height: 1.35;
+}
+@media (max-width: 700px) {
+  .services-hero-pictures {
+    width: 100%;
+  }
+  .services-page-hero .services-hero-title {
+    top: 18px;
+    left: 4.5%;
+    max-width: 62%;
+  }
+  .services-page-hero .services-page-copy {
+    position: static;
+    width: auto;
+    padding: 0 22px 30px;
+  }
+  .services-page-hero .services-page-copy .lead {
+    font-size: clamp(1.22rem, 5.8vw, 1.5rem);
+    line-height: 1.28;
+  }
+}
+/* Supersede the removed animation's reduced-motion poster fallback. */
+@media (prefers-reduced-motion: reduce) {
+  .services-page-hero .services-hero-art {
+    background: #fff;
+  }
+}
