@@ -19,10 +19,11 @@ main .final-cta h2 { color: #166eaa; }
 main .final-cta p { color: #536b77; }
 /* Phone portrait only: let the garden follow the buttons instead of a fixed offset. */
 @media screen and (max-width: 560px) and (orientation: portrait) {
-  .hero { min-height: 0 !important; }
+  .hero { min-height: 0 !important; margin-bottom: 350px !important; }
   .hero-layout { position: static !important; min-height: 0 !important; padding-bottom: 0 !important; }
   .hero-garden {
     position: relative !important;
+    z-index: 2 !important;
     inset: auto !important;
     min-height: 0 !important;
     width: 100%;
@@ -30,5 +31,11 @@ main .final-cta p { color: #536b77; }
     aspect-ratio: 3 / 2;
     margin-top: -36px;
     background-position: center !important;
+  }
+  .benefits-panel {
+    top: 100% !important;
+    bottom: auto !important;
+    padding-top: 82px !important;
+    z-index: 1 !important;
   }
 }
