@@ -1,0 +1,34 @@
+/* White section backgrounds across the site; retain footer and action colours. */
+main section, main .what-we-do, main .service-card, main .card,
+main .compare-card, main .quote-panel-inner, main .hosepipe-box,
+main .work-card, main .work-stage, main .work-note,
+main .contact-simple-item, main .feature-list li {
+  background: #fff !important;
+  box-shadow: none !important;
+}
+main .service-card, main .card, main .compare-card, main .work-card,
+main .work-stage { border-color: transparent !important; }
+main .work-card img, main .comparison-pair .work-card img,
+main .refreshed-gallery .work-card img,
+main .gallery-comparisons .comparison-pair .work-card img,
+main .work-card video {
+  background: #fff !important;
+}
+main .final-cta { color: #24465a; }
+main .final-cta h2 { color: #166eaa; }
+main .final-cta p { color: #536b77; }
+/* Phone portrait only: let the garden follow the buttons instead of a fixed offset. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero { min-height: 0 !important; }
+  .hero-layout { position: static !important; min-height: 0 !important; padding-bottom: 0 !important; }
+  .hero-garden {
+    position: relative !important;
+    inset: auto !important;
+    min-height: 0 !important;
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 3 / 2;
+    margin-top: -36px;
+    background-position: center !important;
+  }
+}
