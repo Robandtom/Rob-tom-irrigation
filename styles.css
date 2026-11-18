@@ -722,6 +722,16 @@ footer p {
   margin: 7px 0;
 }
 
+footer .footer-social-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+footer .footer-social-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 
 /* =========================================================
    TABLET / MOBILE
