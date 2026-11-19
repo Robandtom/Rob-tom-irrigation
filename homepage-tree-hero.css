@@ -24,7 +24,7 @@
 /* Wide transparent equipment foreground, anchored to the garden's lower edge. */
 .hero > .hero-equipment {
   top: auto !important;
-  bottom: 35px !important;
+  bottom: 75px !important;
   left: 25% !important;
   width: 50% !important;
   max-width: 1000px;
