@@ -20,3 +20,32 @@
     margin-top: -100px;
   }
 }
+
+/* Wide transparent equipment foreground, anchored to the garden's lower edge. */
+.hero > .hero-equipment {
+  top: auto !important;
+  bottom: 35px !important;
+  left: 25% !important;
+  width: 50% !important;
+  max-width: 1000px;
+  transform: none !important;
+  z-index: 3 !important;
+}
+.hero > .hero-layout { z-index: 4; }
+@media (orientation: portrait) {
+  .hero > .hero-equipment {
+    left: 4% !important;
+    width: 88% !important;
+    bottom: -25px !important;
+  }
+}
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero > .hero-equipment {
+    bottom: -25px !important;
+    z-index: 3 !important;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .hero > .hero-equipment { bottom: 160px !important; }
+}
