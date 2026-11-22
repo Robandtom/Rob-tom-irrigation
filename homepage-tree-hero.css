@@ -1,6 +1,6 @@
 /* Real garden photograph with its tree extending above the compact garden crop. */
 .hero-garden {
-  background-image: url("images/homepage-real-garden-tree-v1.webp") !important;
+  background-image: url("images/homepage-hadley-wood-garden.jpg") !important;
   z-index: 2 !important;
 }
 .hero-layout { position: relative; z-index: 3; }
@@ -16,7 +16,7 @@
 }
 @media screen and (max-width: 560px) and (orientation: portrait) {
   .hero-garden {
-    aspect-ratio: 1536 / 1354;
+    aspect-ratio: 1;
     margin-top: -100px;
   }
 }
@@ -26,8 +26,8 @@
   top: auto !important;
   bottom: 75px !important;
   left: 25% !important;
-  width: 50% !important;
-  max-width: 1000px;
+  width: 35% !important;
+  max-width: 700px;
   transform: none !important;
   z-index: 3 !important;
 }
@@ -35,7 +35,7 @@
 @media (orientation: portrait) {
   .hero > .hero-equipment {
     left: 4% !important;
-    width: 88% !important;
+    width: 61.6% !important;
     bottom: -25px !important;
   }
 }
@@ -77,8 +77,8 @@
   .hero > .hero-equipment {
     left: 1% !important;
     bottom: -40px !important;
-    width: min(760px, 70vw) !important;
-    max-width: 1000px;
+    width: min(532px, 49vw) !important;
+    max-width: 700px;
     transform: none !important;
   }
 
@@ -135,14 +135,14 @@
 
 /* Responsive refinements requested 22 November 2026. */
 
-/* Tablet portrait: bring the calls to action back into the white copy area and stack them. */
+/* Tablet portrait: place the stacked calls to action below the intro copy. */
 @media screen and (min-width: 561px) and (max-width: 1024px) and (orientation: portrait) {
   .hero-actions {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
-    transform: translateY(-105px) !important;
+    transform: translateY(-50px) !important;
   }
 }
 
