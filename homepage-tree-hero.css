@@ -131,3 +131,65 @@
     font-size: 12px;
   }
 }
+
+
+/* Responsive refinements requested 22 November 2026. */
+
+/* Tablet portrait: bring the calls to action back into the white copy area and stack them. */
+@media screen and (min-width: 561px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    transform: translateY(-105px) !important;
+  }
+}
+
+/* Phone portrait: keep the equipment low, raise benefits slightly, and place the buttons lower on the left. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero-actions {
+    position: relative !important;
+    top: 70px !important;
+    left: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    transform: none !important;
+  }
+
+  .hero > .hero-equipment {
+    bottom: -55px !important;
+  }
+
+  .benefits-panel {
+    top: 100% !important;
+    bottom: auto !important;
+    padding-top: 85px !important;
+  }
+}
+
+/* Phone landscape: leave the blue button where it is and put the green button below it;
+   lift the equipment so its pump meets the lawn edge. */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    transform: none !important;
+  }
+
+  .hero > .hero-equipment {
+    bottom: 0 !important;
+  }
+}
+
+/* Desktop landscape: align the equipment's left edge with the hero copy and let it run over the garden. */
+@media screen and (min-width: 1201px) and (orientation: landscape) {
+  .hero > .hero-equipment {
+    left: max(20px, calc((100vw - 1180px) / 2)) !important;
+  }
+}
