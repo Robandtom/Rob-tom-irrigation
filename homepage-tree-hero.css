@@ -49,3 +49,85 @@
 @media screen and (max-width: 900px) and (orientation: landscape) {
   .hero > .hero-equipment { bottom: 160px !important; }
 }
+
+
+/* Homepage hero refinement: lower and left-align the equipment; keep the garden visible above benefits. */
+.hero-photo-credit {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 8;
+  max-width: calc(100% - 36px);
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, .82);
+  color: #173f38;
+  font: 600 12px/1.35 Arial, Helvetica, sans-serif;
+  letter-spacing: .01em;
+  text-shadow: none;
+  white-space: nowrap;
+}
+
+@media screen and (orientation: landscape) {
+  .hero {
+    overflow: visible !important;
+    margin-bottom: 230px !important;
+  }
+
+  .hero > .hero-equipment {
+    left: 1% !important;
+    bottom: -40px !important;
+    width: min(760px, 70vw) !important;
+    max-width: 1000px;
+    transform: none !important;
+  }
+
+  .benefits-panel {
+    bottom: -170px !important;
+    z-index: 8 !important;
+  }
+}
+
+/* Portrait tablets: keep the equipment low with breathing room before benefits. */
+@media screen and (min-width: 561px) and (orientation: portrait) {
+  .hero > .hero-equipment {
+    bottom: -55px !important;
+    transform: none !important;
+  }
+
+  .benefits-panel {
+    bottom: -260px !important;
+  }
+
+  .hero {
+    margin-bottom: 330px !important;
+    overflow: visible !important;
+  }
+}
+
+/* Narrow phone portrait: the garden flows below the copy, so lower its foreground equipment too. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero > .hero-equipment {
+    bottom: -55px !important;
+    transform: none !important;
+  }
+
+  .benefits-panel {
+    top: 100% !important;
+    bottom: auto !important;
+    padding-top: 120px !important;
+  }
+
+  .hero {
+    margin-bottom: 230px !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero-photo-credit {
+    right: 10px;
+    bottom: 10px;
+    max-width: calc(100% - 20px);
+    font-size: 12px;
+  }
+}
