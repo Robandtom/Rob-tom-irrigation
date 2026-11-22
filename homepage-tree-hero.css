@@ -193,3 +193,20 @@
     left: max(20px, calc((100vw - 1180px) / 2)) !important;
   }
 }
+
+
+/* Mobile portrait: remove the benefits panel and close the gap below the hero. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .benefits-panel {
+    display: none !important;
+  }
+
+  /* The equipment extends 55px below the hero; this leaves about 20px before the blue intro text. */
+  .hero {
+    margin-bottom: 55px !important;
+  }
+
+  .intro-section {
+    padding-top: 20px !important;
+  }
+}
