@@ -184,17 +184,9 @@
   }
 
   .hero > .hero-equipment {
-    bottom: 42px !important;
+    bottom: 88px !important;
   }
 }
-
-/* Desktop landscape: align the equipment's left edge with the hero copy and let it run over the garden. */
-@media screen and (min-width: 1201px) and (orientation: landscape) {
-  .hero > .hero-equipment {
-    left: max(20px, calc((100vw - 1180px) / 2)) !important;
-  }
-}
-
 
 /* Mobile portrait: remove the benefits panel and close the gap below the hero. */
 @media screen and (max-width: 560px) and (orientation: portrait) {
@@ -212,15 +204,41 @@
   }
 }
 
-/* Give the square garden photo more room on wider screens without stretching it. */
-@media screen and (min-width: 901px) and (orientation: landscape) {
+/* Give the garden extra room in tablet landscape. */
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: landscape) {
   .hero-garden {
     bottom: -100px !important;
   }
 }
 
 @media screen and (min-width: 561px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero {
+    min-height: calc(375px + 100vw - 20px);
+  }
+
   .hero-garden {
-    top: 375px !important;
+    inset: 375px 0 auto 20px !important;
+    aspect-ratio: 1;
+    background-size: 100% auto !important;
+    background-position: left top !important;
+  }
+}
+
+/* Keep the full photograph behind the desktop copy and let the equipment sit over the lawn. */
+@media screen and (min-width: 1201px) and (orientation: landscape) {
+  .hero {
+    --garden-width: min(88vw, 1240px);
+    min-height: var(--garden-width);
+  }
+
+  .hero-garden {
+    inset: 0 max(0px, calc((100vw - 1540px) / 2)) 0 auto !important;
+    width: var(--garden-width);
+    background-position: right top !important;
+  }
+
+  .hero > .hero-equipment {
+    left: max(20px, calc((100vw - 1180px) / 2)) !important;
+    bottom: 26px !important;
   }
 }
