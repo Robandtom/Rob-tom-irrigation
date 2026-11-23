@@ -1,6 +1,6 @@
 /* Real garden photograph with its tree extending above the compact garden crop. */
 .hero-garden {
-  background-image: url("images/homepage-hadley-wood-garden.jpg") !important;
+  background-image: url("images/homepage-hadley-wood-soft-edge.webp") !important;
   z-index: 2 !important;
 }
 .hero-layout { position: relative; z-index: 3; }
@@ -142,7 +142,8 @@
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
-    transform: translateY(-50px) !important;
+    margin-top: 32px !important;
+    transform: none !important;
   }
 }
 
@@ -183,7 +184,7 @@
   }
 
   .hero > .hero-equipment {
-    bottom: 0 !important;
+    bottom: 42px !important;
   }
 }
 
@@ -208,5 +209,18 @@
 
   .intro-section {
     padding-top: 20px !important;
+  }
+}
+
+/* Give the square garden photo more room on wider screens without stretching it. */
+@media screen and (min-width: 901px) and (orientation: landscape) {
+  .hero-garden {
+    bottom: -100px !important;
+  }
+}
+
+@media screen and (min-width: 561px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-garden {
+    top: 375px !important;
   }
 }
