@@ -386,3 +386,14 @@ main h2:not(.work-page h2), .work-page h2 { color:#166eaa; }
   .services-hero-video { visibility: hidden; }
   .services-hero-art { background: url("images/services-irrigation-poster.webp") center bottom / 100% auto no-repeat; }
 }
+
+
+/* Keep the above-ground headline legible over the leafy corner of the new hero image. */
+@media (min-width: 701px) {
+  .above-ground-page-hero .above-ground-hero-title h1 span,
+  .above-ground-page-hero .above-ground-hero-title h1 span + span {
+    -webkit-text-stroke: 1.5px rgba(255,255,255,1);
+    paint-order: stroke fill;
+    text-shadow: 0 0 4px rgba(255,255,255,1), 0 0 12px rgba(255,255,255,.98), 0 0 22px rgba(255,255,255,.92), 0 2px 4px rgba(0,0,0,.35);
+  }
+}
